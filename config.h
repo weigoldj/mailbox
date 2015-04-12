@@ -1,5 +1,3 @@
-// #ifndef CONFIG_H
-// #define CONFIG_H
 
 #include <map>
 #include <fstream>
@@ -14,22 +12,12 @@ class Config {
     ~Config();
 
     void read_config(void);
+    void print(void);
 
   private:
   
-    map <string, string> val;
+    map <string, string> c_values;
 
 };
 
 
-//Config::Config(void) { 
-//  val["one"] = "1";
-//}
-//
-//Config::~Config(void) { }
-//
-//Config::read_config {
-//  cout << " TO STRING() " << endl; 
-//}
-//
-//#endif

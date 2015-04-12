@@ -1,28 +1,23 @@
 #include "config.h"
 
 Config::Config(void) { 
-  val["one"] = "1";
+  read_config();
 }
 
 Config::~Config(void) { }
 
 void Config::read_config(void) {
-  cout << " TO STRING() " << endl; 
+  cout << " reading config values " << endl; 
+  c_values["one"] = "1";
 }
 
-//#endif
-//#include "config.h"
-//
-//class Config {
-//
-//  public:
-//    Config();
-//    ~Config();
-//
-//    void read_config();
-//
-//  private:
-//  
-//    map <string, string> val;
-//
-//}
+void Config::print(void) {
+  string tmp; 
+  tmp += "config values \n";
+  for(auto i : c_values) {
+    tmp += "\t" + i.first + " => " + i.second + "\n";
+  }
+  
+  cout << tmp;
+}
+

@@ -6,9 +6,9 @@ CC=g++
 CFLAGS=-I.
 
 # tell make that we are dependant on these files
-DEPS = mailbox.h 
+DEPS = mailbox.h config.h
 
-OBJ = app_main.o mailbox.o
+OBJ = app_main.o config.o mailbox.o
 # g++ -Wall hello.cpp -o hello
 
 
@@ -17,3 +17,6 @@ OBJ = app_main.o mailbox.o
 
 mailbox: $(OBJ)
 	$(CC) -std=c++11 -o $@ $^ $(CFLAGS)
+
+clean:
+	rm -rf *.o mailbox
