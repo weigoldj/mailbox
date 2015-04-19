@@ -13,6 +13,7 @@
 # -l <lib>   => link with library lib<library>.a
 
 require 'rake'
+require 'fileutils'
 
 # specify a compiler.
 CC = "g++"
@@ -31,6 +32,8 @@ ODIR = "obj"
 
 task :init do 
   @files = Rake::FileList["src/**/*.cpp"]
+  FileUtils.mkdir_p 'bin'
+  FileUtils.mkdir_p 'obj'
 end 
 
 desc "print build configuration" 
