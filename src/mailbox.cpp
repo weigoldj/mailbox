@@ -26,7 +26,7 @@ void Mailbox::monitor_dir(void) {
   dir = opendir(dir_name.c_str());
   //  # TODO check that dir is not null
   
-  while(s_dir = readdir(dir)) { 
+  while((s_dir = readdir(dir))) { 
     cout << s_dir->d_name << endl; 
   };
 }

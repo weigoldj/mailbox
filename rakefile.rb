@@ -59,7 +59,7 @@ task :compile => "clean" do
   # @files.pathmap("%n").each do |file| 
   @files.each do |file| 
     puts "compiling file #{file}"
-    system("#{CC} -c #{file} -o #{ODIR}/#{file.pathmap('%n')}.o")
+    system("#{CC} -std=c++11 -c #{file} -o #{ODIR}/#{file.pathmap('%n')}.o")
   end
   
 end 
