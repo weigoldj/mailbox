@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
   Mailbox mb;
   
   // start the monitoring
-  mb.monitor_dir();
+//  mb.monitor_dir();
 
   return 0;
 }
